@@ -1,0 +1,42 @@
+{
+  "name": "evaline-chat",
+  "version": "0.1.0",
+  "description": "EvaLine enterprise chat-engine host with a plugin system for attaching agents (evaline-consilium multi-LLM deliberation, evabot corporate provider).",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --experimental-strip-types --test tests/*.test.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "evaline-consilium": "file:../evaline-consilium"
+  },
+  "keywords": [
+    "chat",
+    "plugin",
+    "agents",
+    "consilium",
+    "llm",
+    "evaline"
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^5.9.3"
+  }
+}

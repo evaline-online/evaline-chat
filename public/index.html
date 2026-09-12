@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvaLine Chat</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>EvaLine Chat</h1>
+      <p class="subtitle">Corporate room chat with humans and LLM bots</p>
+    </header>
+    <main id="rooms" aria-busy="true">
+      <p class="placeholder">Browser UI is built separately. Use the HTTP API:</p>
+      <pre>POST /api/rooms     GET /api/rooms
+POST /api/rooms/:id/members   DELETE /api/rooms/:id/members/:memberId
+POST /api/rooms/:id/messages  GET /api/rooms/:id/messages?after=0
+DELETE /api/rooms/:id</pre>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

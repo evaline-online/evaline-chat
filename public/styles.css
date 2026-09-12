@@ -1,0 +1,42 @@
+:root {
+  --bg: #0f1218;
+  --fg: #e6e9ef;
+  --accent: #4f8cff;
+  --muted: #8a93a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+#app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0.25rem 0 1.5rem;
+}
+
+pre {
+  background: #171c26;
+  border: 1px solid #222a3a;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: auto;
+  color: var(--accent);
+}
